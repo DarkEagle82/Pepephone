@@ -1,5 +1,5 @@
 #!/bin/bash
-source script_diari.ini
+source script_diari_v1.ini
 # Restem un dia a la fetxa per calcular el consum el dia anterior.
 DATEF=`date -d "-1 day" +%d/%m/%Y`
 
