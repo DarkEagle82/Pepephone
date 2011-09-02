@@ -1,0 +1,2 @@
+01 09   * * *  /pepephone/pepephone/script_diari.sh > /dev/null
+03 09   1 * *   /pepephone/pepephone/script_mensual.sh > /dev/null
