@@ -11,6 +11,7 @@ rm $RUTA/informe_diari.txt
 fi
 
 # Si li passem un parametre, el fara servir com a fecha.
+# Us: $0 dd/mm/yyyy
 
 if [ $# -eq 1 ]
         then
