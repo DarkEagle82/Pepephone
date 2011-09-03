@@ -1,2 +1,2 @@
-01 09   * * *  /pepephone/pepephone/script_diari.sh > /dev/null
-03 09   1 * *   /pepephone/pepephone/script_mensual.sh > /dev/null
+01 09   * * *  /pepephone/pepephone/script_diari_v2.sh > /dev/null
+03 09   1 * *   /pepephone/pepephone/script_mensual_v2.sh > /dev/null
