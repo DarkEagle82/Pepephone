@@ -1,0 +1,1 @@
+Scripts que coloco en el crontab del sistema y me mandan un mail al correo con el gasto diario/mensual de las lineas de movil que poseo.
