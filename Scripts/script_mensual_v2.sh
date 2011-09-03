@@ -98,14 +98,25 @@ for ((i=0;i<LINEAS;i++)); do
 	/usr/bin/python $RUTA2/pepephone.py -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_pulpo_noprint >> $RUTA/informe_mensual.txt
 	echo \<br\> >> $RUTA/informe_mensual.txt
 	echo
+
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>COBAYA\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
 	echo \<br\> >> $RUTA/informe_mensual.txt
-	/usr/bin/python $RUTA2/pepephone.py -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_cobaya_noprint >> $RUTA/informe_mensual.txt
-	
+	/usr/bin/python $RUTA2/pepephone.py -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_cobaya_noprint >> $RUTA/informe_mensual.txt	
 	echo \<br\> >> $RUTA/informe_mensual.txt
+	echo
+
+	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>NUEVEGA Y HABLA\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
+	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo
+	echo \<br\> >> $RUTA/informe_mensual.txt
+	/usr/bin/python $RUTA2/pepephone.py -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_nuevega_noprint >> $RUTA/informe_mensual.txt	
+	echo \<br\> >> $RUTA/informe_mensual.txt
+	
+	
 	echo \<\/html\> >> $RUTA/informe_mensual.txt
 	echo
 done	
