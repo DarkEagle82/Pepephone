@@ -1,9 +1,10 @@
 #!/bin/bash
-source script_mensual_v2.ini
+basename=${0%.*}
+source $basename.ini
 if [ $UNCONFIG == 1 ]
 then
      echo
-     echo "Abans has de configurar el arxiu script_mensual_v2.ini"
+     echo "Abans has de configurar el $basename.ini"
      echo
      exit 1
 fi
