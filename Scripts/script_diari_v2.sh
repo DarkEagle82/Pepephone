@@ -54,7 +54,6 @@ for ((i=0;i<LINEAS;i++)); do
      echo
      echo >> $RUTA/informe_diari.txt
 done
-exit
-Enviament de correu electronic
+# Enviament de correu electronic
 cat $RUTA/informe_diari.txt | /usr/sbin/sendmail $CORREO
 
