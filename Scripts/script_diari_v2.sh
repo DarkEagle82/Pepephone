@@ -2,10 +2,15 @@
 source script_diari_v2.ini
 if [ $UNCONFIG == 1 ]
 then
-echo
-echo "Abans has de configurar el arxiu script_diari_v2.ini"
-echo
-exit 1
+     echo
+     echo "Abans has de configurar el arxiu script_diari_v2.ini"
+     echo
+     exit 1
+fi
+if [  ${#USUARIO[@]} != ${#TELF[@]} ] || [ ${#USUARIO[@]} != ${#TARIFA[@]} ]
+then
+     echo "El fitxer de configuració no és correcte, hi ha d'haver el mateix nombre d'usuaris, que de telefons, que de tarifes !!"
+     exit 1
 fi
 # Restem un dia a la fetxa per calcular el consum el dia anterior.
 DATEF=`date -d "-1 day" +%d/%m/%Y`
@@ -21,8 +26,8 @@ fi
 # Us: $0 dd/mm/yyyy
 
 if [ $# -eq 1 ]
-        then
-        DATEF=$1
+     then
+     DATEF=$1
 fi
 
 # Encapçalament Correu i assumpte
@@ -55,5 +60,9 @@ for ((i=0;i<LINEAS;i++)); do
      echo >> $RUTA/informe_diari.txt
 done
 # Enviament de correu electronic
-cat $RUTA/informe_diari.txt | /usr/sbin/sendmail $CORREO
+NUMMAILS=${#CORREO[@]}
+for ((i=0;i<NUMMAILS;i++)); do
+	cat $RUTA/informe_diari.txt | /usr/sbin/sendmail ${CORREO[$i]}
+done
+exit 0
 
