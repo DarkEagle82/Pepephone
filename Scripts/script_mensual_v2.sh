@@ -1,5 +1,5 @@
 #!/bin/bash
-source script_mensual_v1.ini
+source script_mensual_v2.ini
 if [ $UNCONFIG == 1 ]
 then
      echo
