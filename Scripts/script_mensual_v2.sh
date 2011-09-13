@@ -116,6 +116,16 @@ for ((i=0;i<LINEAS;i++)); do
 	echo \<br\> >> $RUTA/informe_mensual.txt
 	/usr/bin/python $RUTA2/pepephone.py -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_nuevega_noprint >> $RUTA/informe_mensual.txt	
 	echo \<br\> >> $RUTA/informe_mensual.txt
+	echo
+	
+	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>MOVIL TODAY\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
+	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo
+	echo \<br\> >> $RUTA/informe_mensual.txt
+	/usr/bin/python $RUTA2/pepephone.py -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_movil_today_noprint >> $RUTA/informe_mensual.txt	
+	echo \<br\> >> $RUTA/informe_mensual.txt
+	echo
 	
 	
 	echo \<\/html\> >> $RUTA/informe_mensual.txt
