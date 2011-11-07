@@ -11,8 +11,8 @@ class Llamada(LlamadaG):
    coste_sms      = 0.09
    coste_mms      = 0.29 # Ni idea de cuánto es en realidad
    coste_establ   = 0.00
-   coste_min1     = 0.085
-   coste_min2     = 0.085
+   coste_min1     = 0.084
+   coste_min2     = 0.084
    seg_cam        = 210 # 3 minutos y medio
 
    def gcoste(self):
