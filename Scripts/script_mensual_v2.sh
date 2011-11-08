@@ -101,7 +101,7 @@ for ((i=0;i<LINEAS;i++)); do
 	echo
 
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
-	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>COBAYA\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
+	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>RATONCITO Y ELEFANTE\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
 	echo \<br\> >> $RUTA/informe_mensual.txt
