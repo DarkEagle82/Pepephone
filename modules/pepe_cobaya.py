@@ -11,7 +11,7 @@ class Llamada(LlamadaG):
    coste_sms    = 0.09
    coste_mms    = 0.29 # Ni idea de cuánto es en realidad
    coste_establ = 0.15
-   coste_minuto = 0.028
+   coste_minuto = 0.027
 
    def gcoste(self):
       if self.tipo=='SMS':
