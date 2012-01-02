@@ -16,7 +16,13 @@ fi
 # Restem un dia a la fetxa per calcular el consum el dia anterior.
 DATEF=`date -d "-1 month" +%m/%Y`
 
+DATEA=`date +%d/%m`
+if [ $DATEA == "01/01" ]
+then
+    ANY=`date -d "-1 year" +%Y`
+else
 ANY=`date +%Y`
+fi
 
 # Calculem els dies que te el mes anterior
 
