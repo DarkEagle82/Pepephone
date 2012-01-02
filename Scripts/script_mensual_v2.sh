@@ -44,11 +44,13 @@ then
 rm $RUTA/informe_mensual.txt
 fi
 
-# Si li passem un parametre, el fara servir com a fecha.
-# Us: $0 mm/yyyy
-if [ $# -eq 1 ]
+# Si li passem dos parametres, els fara servir com a fecha.
+# Us: $0 dd mm/yyyy
+## dd el maxim de dies del mes
+if [ $# -eq 2 ]
         then
-        DATEF=$1
+        DIA=$1
+        DATEF=$2
 fi
                 
 # Encapçalament Correu i assumpte
