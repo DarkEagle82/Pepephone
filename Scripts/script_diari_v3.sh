@@ -42,7 +42,7 @@ fi
 # Encapçalament Correu i assumpte
 echo MIME-Version: 1.0 >> $RUTA/informe_diari.txt
 echo Content-type: text\/html\; charset=utf-8 >> $RUTA/informe_diari.txt
-echo subject: Informe DIARI de consum el dia $DATEF >> $RUTA/informe_diari.txt
+echo subject: Informe DIARI de $USUARIO de consum el dia $DATEF >> $RUTA/informe_diari.txt
 echo >> $RUTA/informe_diari.txt
 echo \<html\> >> $RUTA/informe_diari.txt
 
@@ -58,7 +58,7 @@ for ((i=0;i<LINEAS;i++)); do
      echo Movil ${USUARIO[$i]}
      echo
      echo "************************************" \<br\> >> $RUTA/informe_diari.txt
-     echo \<b\>Movil de ${USUARIO[$i]} \<\/b\> Tarifa Actual:  \<font color=\#1E9FEE\>${TARIFA[$i]}}\<\/font\>\<br\> >> $RUTA/informe_diari.txt
+     echo \<b\>Movil de ${USUARIO[$i]} \<\/b\> Tarifa Actual: \<font color=\#1E9FEE\>${TARIFA[$i]}\<\/font\>\<br\> >> $RUTA/informe_diari.txt
      echo "************************************" \<br\> >> $RUTA/informe_diari.txt
      echo
      echo \<br\> >> $RUTA/informe_diari.txt
