@@ -63,7 +63,7 @@ fi
 # Encapçalament Correu i assumpte
 echo MIME-Version: 1.0 >> $RUTA/informe_mensual.txt
 echo Content-type: text\/html\; charset=utf-8 >> $RUTA/informe_mensual.txt
-echo subject: Informe MENSUAL de consum del dia 01/$DATEF al $DIA/$DATEF >> $RUTA/informe_mensual.txt
+echo subject: Informe MENSUAL per $USUARIO de consum del dia 01/$DATEF al $DIA/$DATEF >> $RUTA/informe_mensual.txt
 echo >> $RUTA/informe_mensual.txt
 echo \<html\> >> $RUTA/informe_mensual.txt
 
@@ -79,7 +79,7 @@ for ((i=0;i<LINEAS;i++)); do
 	# Consulta del moviln
 	echo Movil ${USUARIO[$i]}
 	echo "************************************" \<br\> >> $RUTA/informe_mensual.txt
-	echo \<b\>Movil de ${USUARIO[$i]}\<\/b\> Tarifa Actual: ${TARIFA[$i]}\<br\> >> $RUTA/informe_mensual.txt
+	echo \<b\>Movil de ${USUARIO[$i]}\<\/b\> Tarifa Actual: \<font color=\#1E9FEE\>${TARIFA[$i]}\<\/font\>\<br\> >> $RUTA/informe_mensual.txt
 	echo "************************************" \<br\> >> $RUTA/informe_mensual.txt
 	echo
 	echo \<br\> >> $RUTA/informe_mensual.txt
@@ -88,6 +88,7 @@ for ((i=0;i<LINEAS;i++)); do
 	echo
 	
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo Link: \<a href=\"http://www.pepephone.com/tarifamovilonia/\"\>http://www.pepephone.com/tarifamovilonia/\<\/a\> \<br\> >> $RUTA/informe_mensual.txt
 	echo Si s\'hagues fet servir la tarifa  \<b\>\<font color=\"blue\"\>VIP\<\/font\>\<\/b\> \(sense establiment\) el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
@@ -97,7 +98,8 @@ for ((i=0;i<LINEAS;i++)); do
 	echo
 	
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
-	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>4.5 cent\<\/font\>\<\/b\>el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
+	echo Link: \<a href=\"http://www.pepephone.com/promo/adslzone/\"\>http://www.pepephone.com/promo/adslzone/\<\/a\> \<br\> >> $RUTA/informe_mensual.txt
+	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>4.5 cent\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
 	echo \<br\> >> $RUTA/informe_mensual.txt
@@ -107,7 +109,8 @@ for ((i=0;i<LINEAS;i++)); do
 	
 	echo
 	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
-	echo Si s\'hagues fet servir la tarifa  \<b\>\<font color=\"blue\"\>Pulpo Paul\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
+	echo Link: \<a href=\"http://www.pepephone.com/promo/adslzone-pulpopepe/index.html\"\>http://www.pepephone.com/promo/adslzone-pulpopepe/index.html\<\/a\> \<br\> >> $RUTA/informe_mensual.txt
+	echo Si s\'hagues fet servir la tarifa  \<b\>\<font color=\"blue\"\>Pulpo Pepe\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
 	echo \<br\> >> $RUTA/informe_mensual.txt
@@ -116,6 +119,7 @@ for ((i=0;i<LINEAS;i++)); do
 	echo
 
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo Link: \<a href=\"http://www.pepephone.com/promo/movilonia\"\>http://www.pepephone.com/promo/movilonia\<\/a\> \<font color=\"purple\"\>Associada a DADES. +6.9eur\<\/font\>\<br\> >> $RUTA/informe_mensual.txt
 	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>RATONCITO Y ELEFANTE\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
@@ -123,9 +127,10 @@ for ((i=0;i<LINEAS;i++)); do
 	/usr/bin/python $RUTA2/$PROGRAMA -i 01/$DATEF -f $DIA/$DATEF -n ${TELF[$i]} -m pepe_cobaya_noprint >> $RUTA/informe_mensual.txt	
 	echo \<br\> >> $RUTA/informe_mensual.txt
 	echo
-
+	
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
-	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>NUEVEGA Y HABLA\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
+	echo Link: \<a href=\"http://www.pepephone.com/tarifamovilonia9/\"\>http://www.pepephone.com/tarifamovilonia9/\<\/a\> \<font color=\"purple\"\>Associada a DADES. +6.9eur\<\/font\>\<br\> >> $RUTA/informe_mensual.txt
+	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>NUEVEGA Y HABLA\<\/font\>\<\/b\>  \(sense establiment\) el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo
 	echo \<br\> >> $RUTA/informe_mensual.txt
@@ -134,6 +139,7 @@ for ((i=0;i<LINEAS;i++)); do
 	echo
 	
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
+	echo Link: \<a href=\"http://www.pepephone.com/promo/moviltoday8/\"\>http://www.pepephone.com/promo/moviltoday8/\<\/a\> \<br\> >> $RUTA/informe_mensual.txt
 	echo Si s\'hagues fet servir la tarifa \<b\>\<font color=\"blue\"\>MOVIL TODAY\<\/font\>\<\/b\> el gasto hauria sigut de: \<br\> >> $RUTA/informe_mensual.txt
 	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" \<br\> >> $RUTA/informe_mensual.txt
 	echo

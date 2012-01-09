@@ -58,7 +58,7 @@ for ((i=0;i<LINEAS;i++)); do
      echo Movil ${USUARIO[$i]}
      echo
      echo "************************************" \<br\> >> $RUTA/informe_diari.txt
-     echo \<b\>Movil de ${USUARIO[$i]} \<\/b\> Tarifa Actual: ${TARIFA[$i]}\<br\> >> $RUTA/informe_diari.txt
+     echo \<b\>Movil de ${USUARIO[$i]} \<\/b\> Tarifa Actual:  \<font color=\#1E9FEE\>${TARIFA[$i]}}\<\/font\>\<br\> >> $RUTA/informe_diari.txt
      echo "************************************" \<br\> >> $RUTA/informe_diari.txt
      echo
      echo \<br\> >> $RUTA/informe_diari.txt
