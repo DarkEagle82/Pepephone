@@ -1,4 +1,24 @@
 #!/bin/bash
+#Handles the keyboard interrupt (control-c)
+function ctrl_c
+{
+    echo "Bye ;)"
+    remove_temp_files
+    exit 1
+}
+            
+#Trap keyboard interrupt (control-c)
+trap ctrl_c SIGINT
+
+#Remove temporary files
+function remove_temp_files
+{
+	if [ -f $RUTA/informe_mensual.txt ]
+	then
+		rm $RUTA/informe_mensual.txt
+	fi
+}
+         
 if [ $# -lt 1 ] || [ $# -gt 3 ] || [ $# -eq 2 ]
 then
      echo
@@ -7,6 +27,15 @@ then
      echo
      exit 1
 fi
+
+if [ ! -r "$1" ]; then
+    echo
+    echo "Assegurat que el fitxer de configuracio existeix"
+    echo "Us: $0 fitxer_config.ini [dd] [mm/yyyy]"
+    echo
+    exit 1
+fi             
+
 source $1
 if [ $UNCONFIG == 1 ]
 then
@@ -46,10 +75,7 @@ esac
 
 # Borrem el fitxer d'informe anterior si hi es.
 
-if [ -f $RUTA/informe_mensual.txt ]
-then
-rm $RUTA/informe_mensual.txt
-fi
+remove_temp_files
 
 # Si li passem dos parametres, els fara servir com a fecha.
 # Us: $0 dd mm/yyyy
