@@ -13,9 +13,9 @@ trap ctrl_c SIGINT
 #Remove temporary files
 function remove_temp_files
 {
-        if [ -f $RUTA/informe_mensual.txt ]
+        if [ -f $RUTA/informe_diari.txt ]
         then
-                rm $RUTA/informe_mensual.txt
+                rm $RUTA/informe_diari.txt
         fi
 }
 
