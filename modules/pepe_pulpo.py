@@ -11,7 +11,7 @@ class Llamada(LlamadaG):
    coste_sms    = 0.09
    coste_mms    = 0.29 # Ni idea de cuánto es en realidad
    coste_establ = 0.15
-   limite_coste = 0.05
+   limite_coste = 0.049
 
    def gcoste(self):
       if self.tipo=='SMS':
@@ -25,6 +25,7 @@ class Llamada(LlamadaG):
             coste_llamada=0
          else: #Hay otros muchos casos: extranjero, números 901, 902, etc,
             coste_minuto=(self.duracion//60)/100.0
+            if self.duracion>60: coste_minuto=(coste_minuto)-(0.01)
             if coste_minuto>Llamada.limite_coste: coste_minuto=Llamada.limite_coste
             coste_llamada=td(Llamada.coste_establ+coste_minuto/60*self.duracion)
          return coste_llamada
